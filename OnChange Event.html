@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript">
+function display()
+    {
+        var name=document.getElementById("val1").value;
+        var surname=document.getElementById("val2").value;
+        var fullname=name+" "+surname;
+        document.getElementById("result").value=fullname.toUpperCase();
+    }
+</script>
+</head>
+
+<body>
+Enter Name:<input type="text" id="val1" /><br>
+Enter Surname:<input type="text" id="val2" onChange="display()" /><br>
+Full Name:<input type="text" id="result" readonly />
+</body>
+</html>

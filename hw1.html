@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JAVASCRIPT EVENT</title>
+<script type="text/javascript">
+function sum()
+	{
+		var a=document.getElementById("val1").value;
+		var b=document.getElementById("val2").value;
+		var c=a+" "+b
+		
+		document.getElementById("val3").value=c.toUpperCase();
+
+	}
+</script>
+</head>
+<body>
+<h2>Onclick Event Demo</h2>
+<p>Click on the button when form display</p><br>
+
+
+Enter First Name :<input type="text" id="val1" /><br>
+Enter Last Name :<input type="text" id="val2" /><br>
+Full Name :<input type="text" id="val3" /><br>
+	
+<button id="b1" onClick="sum()">Click Here</button>
+</body>
+</html>

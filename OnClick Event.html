@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type="text/javascript">
+function display()
+    {
+        var name=document.getElementById("txt1").value;
+        var surname=document.getElementById("txt2").value;
+        var fullname=name+" "+surname;
+        document.getElementById("disp").innerHTML=fullname.toLocaleUpperCase();
+        document.getElementById("txt3").value=fullname.toUpperCase();
+    }
+</script>
+</head>
+
+<body>
+<h2>OnClick Event Demo</h2>
+
+Enter your Name:<input type="text" id="txt1" /><br>
+Enter your Surname:<input type="text" id="txt2" /><br>
+Full Name:<input type="text" id="txt3" /><br>
+    
+<button id="b1" onclick="display()">Click Me</button>
+    
+<p id="disp"></p>
+</body>
+</html>

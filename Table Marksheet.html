@@ -1,0 +1,188 @@
+<html>
+<head>
+<style>
+body
+{
+ border-radius: 20px;
+ border-style:dotted;
+ border-color:#001B37;
+ position: absolute;
+ width: 850px;
+ height: 705px;
+ top: 15px;
+ left: 200px;
+ padding: 30px 30px 50px 30px;
+ background-color:lightblue;
+}
+#tbl,#tbl2
+{
+background-color:cornsilk;
+font-size:20;
+font-family:Century Gothic;
+}
+.demo
+{
+background-color:tomato;
+position:absolute;
+left:310px;
+top:380px;
+font-size:20;
+font-family:Arial;
+font-weight:bold;
+margin-top:20px;
+border-collapse:collapse;
+}
+#demoname
+{
+font-size:18px
+}
+.btn
+{
+position:absolute;
+top:350px;
+left:720px;
+}
+</style>
+
+<script>
+function myFun()
+{
+var a=document.form1.txtfname.value;
+document.getElementById("fname").innerHTML=a;
+var b=document.form1.txtlname.value;
+document.getElementById("lname").innerHTML=b;
+var c=document.form1.txtins.value;
+document.getElementById("ins").innerHTML=c;
+var d=document.form1.txtbatch.value;
+document.getElementById("batch").innerHTML=d;
+var e=document.form1.txtcs.value;
+document.getElementById("cs").innerHTML=e;
+var f=document.form1.txtcl.value;
+document.getElementById("clang").innerHTML=f;
+var g=document.form1.txtcf.value;
+document.getElementById("cf").innerHTML=g;
+var h=document.form1.txtint.value;
+document.getElementById("netint").innerHTML=h;
+var txt1=eval(parseFloat(document.form1.txtcs.value)+parseFloat(document.form1.txtcl.value)
++parseFloat(document.form1.txtcf.value)+parseFloat(document.form1.txtint.value));
+document.getElementById("total").innerHTML=txt1;
+var txt2=eval(parseFloat(txt1*100)/400);
+document.getElementById("per").innerHTML=txt2.toFixed(2)+"%";
+
+switch(true)
+{
+case(txt2>=90):
+document.getElementById("grade").innerHTML="A1";
+break;
+case(txt2>=80):
+document.getElementById("grade").innerHTML="A";
+break;
+case(txt2>=70):
+document.getElementById("grade").innerHTML="B";
+break;
+case(txt2>=60):
+document.getElementById("grade").innerHTML="C";
+break;
+case(txt2>=40):
+document.getElementById("grade").innerHTML="D";
+break;
+case(txt2<40):
+document.getElementById("grade").innerHTML="Fail";
+break;
+}
+
+}
+</script>
+</head>
+
+<body>
+<div class="color">
+<h1 align="center"style="font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif'";><i>MARKSHEET</i></h1>
+<fieldset>
+<legend> STUDENT INFORMATION </legend>
+<table align="center" id="tbl">
+<form name="form1">
+<tr>
+<td width="140">First Name:</td> <td><input type="text" name="txtfname"/></td>
+<td> &nbsp; &nbsp;Last Name:</td><td> <input type="text" name="txtlname"/></td>
+</tr>
+
+<tr>
+<td width="140" >Roll No:</td><td> <input type="text" name="txtins"/></td>
+<td style="text-indent:16px">GR No:</td><td> <input type="text" name="txtbatch"/></td>
+</tr>
+</table>
+</fieldset><br>
+<fieldset>
+<legend> SUBJECTS MARKS </legend>
+<table id="tbl2">
+<tr>
+<td>Communication Skill:</td><td> <input type="text" name="txtcs" maxlength="2" size="10"/><tt>/100</tt></td>
+</tr>
+<tr>
+<td>C Language:</td><td>  <input type="text" name="txtcl" maxlength="2" size="10"/><tt>/100</tt></td>
+</tr>
+<tr>
+<td>Computer Fundamental:</td><td> <input type="text" name="txtcf" maxlength="2" size="10"/><tt>/100</tt></td>
+</tr>
+<tr>
+<td>NET and INT:</td><td> <input type="text" name="txtint" maxlength="2" size="10" /><tt>/100</tt></td>
+</tr>
+<tr>
+</tr>
+</table>
+</fieldset>
+<div class="btn">
+<button style="font-size:17" type="button" onclick="myFun()">Submit</button>
+<button style="font-size:17" type="Reset">Reset</button>
+</div>
+<div class="demo" align="center">
+<table border="2" width="300">
+<tr>
+<th colspan="8" width="280" align="center"> Student Information </th>
+</tr>
+<tr>
+<td width="160">Fiest Name:</td><td><font face="arial" id="fname"></font></td>
+</tr>
+<tr>
+<td width="160">Last Name:</td><td><font face="arial" id="lname"></font></td>
+</tr>
+<tr>
+<td width="160">Roll No:</td><td><font face="arial" id="ins"></font></td>
+</tr>
+<tr>
+<td width="160">GR No:</td> <td><font face="arial" id="batch"></font></td>
+</tr>
+<tr>
+<th colspan="8" width="280"> Subjects Marks </th>
+</tr>
+<tr>
+<td width="160">Communication Skill:</td> <td><font face="arial" id="cs"></font></td>
+</tr>
+<tr>
+<td width="160">C Language:</td><td><font face="arial" id="clang"></font></td>
+</tr>
+<tr>
+<td width="160">Computer Fundamental:</td><td><font face="arial" id="cf"></font></td>
+</tr>
+<tr>
+<td width="160">NET and INT:</td><td><font face="arial" id="netint"></font></td>
+</tr>
+<tr>
+<th colspan="8" width="280"> Marks Result </th>
+</tr>
+<tr>
+<td width="160">TOTAL:</td><td> <font face="arial" id="total"></font></td>
+</tr>
+<tr>
+<td width="160">Percentage:</td><td><font face="arial" id="per"></font></td>
+</tr>
+<tr>
+<td width="160">Grade:</td><td><font face="arial" id="grade"></font></td>
+</tr>
+</table>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type="text/javascript">
+function mailchk()
+    {
+        var emailID=document.getElementById("mail").value;
+        var regexp=/^[0-9 a-z A-Z]+(.|_)?[0-9 a-z A-Z]*\@(yahoo|gmail|co|in|rediffmail)\.(com|in)$/;
+        
+        if(emailID.match(regexp))
+            {
+                return true;
+            }
+        else
+            {
+                alert("Please Enter Correct E-mail ID");
+                document.getElementById("mail").value="";
+                document.getElementById("mail").focus();
+                return false;
+            }
+    }
+</script>
+</head>
+
+<body>
+<form>
+<input type="text" id="mail" onChange="mailchk()" required>
+<input type="submit" name="save" value="save">
+</form>
+</body>
+</html>

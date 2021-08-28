@@ -1,0 +1,36 @@
+<html>
+<body>
+<script type="text/javascript">
+var s1="Hello";
+var s2="Hello";
+var str="Kamani Science Collage";
+var col="Collage";
+var fullname;
+fullname=str.concat(col);
+document.write("Character At="+str.charAt(4)+"<br>");
+document.write("Character At="+str.charAt(10)+"<br>");
+document.write("Concate String="+fullname+"<br>");
+document.write("Index of String="+str.indexOf("a")+"<br>");
+document.write("Index of String="+str.indexOf("n")+"<br>");
+document.write("Index of String="+str.lastIndexOf("n")+"<br>");
+if(s1.match(fullname))
+    {
+        document.write("Match String"+"<br>");
+    }
+else
+    {
+        document.write("Not match");
+    }
+document.write("String Replace="+str.replace("Kamani","Pratprai")+"<br>");
+document.write("Search String="+str.search("Kamani")+"<br>");
+document.write("Slice String="str.slice(0,6)+"<br>");
+document.write("Slice String="fullname.slice(15,22)+"<br>");
+document.write("Sub String="+fullname.substring(7,14)+"<br>");
+document.write("Sub String="+fullname.substring(0,14)+"<br>");
+document.write("Substr Value="+fullname.substr(0,10)+"<br>");
+document.write("Substr Value="+fullname.substr(10,2)"<br>");
+document.write("UpperCase Value="+fullname.toUpperCase()+"<br>");
+document.write("LowerCase Value="+fullname.toLowerCase()+"<br>");
+</script>
+</body>
+</html>

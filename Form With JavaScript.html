@@ -1,0 +1,63 @@
+<html>
+<head>
+<script type="text/javascript">
+function display()
+{
+	var a=document.getElementById("val1").value;
+	document.getElementById("val1").value=a.toUpperCase();
+	var b=document.getElementById("val2").value;
+	document.getElementById("val2").value=b.toUpperCase();
+	var c=a+" "+b;
+	document.getElementById("val3").value=c.toUpperCase();
+}
+function D1()
+{
+	alert("Enter Valid 10 Digit Mobile Number");
+}
+function myFunction()
+{
+  alert("The form was submitted");
+}
+/*document.getElementById("myForm").onsubmit = function() {myFunction()};*/
+</script>
+</head>
+<body>
+<h1>Form</h1>
+<form id="myform" action="action_file.php">
+<pre>
+<label><font size="4"><b>First Name:</b></font>
+<input type="text" name="fname"  id="val1" onKeyDown="display()">
+</label> 
+</pre>
+<pre>
+<label><font size="4"><b>Last Name:</b></font>
+<input type="text" name="lname" id="val2" onKeyDown="display()">
+</label> 
+</pre>
+<pre>
+<label><font size="4"><b>Full Name:</b></font>
+<input type="text" name="flname" id="val3" onBlur="display()">
+</label> 
+</pre>
+<pre>
+<label><font size="4"><b>Address:</b></font> 
+<textarea name="add" rows="5">Enter Address....</textarea>
+</label>
+</pre><br>
+<fieldset>
+<legend><font size="4"><b>Gender:</b></font></legend>
+<p><label> <input type="checkbox" name="gender" value="M">Male</label></p>
+<p><label> <input type="checkbox" name="gender" value="F">Female</label></p>
+</fieldset>
+<br>
+<pre>
+<label><font size="4"><b>Mobile No.:</b></font>
+<input type="number" name="fname"  id="" onclick="D1()">
+</label> 
+</pre>
+<br>
+<input type="submit" name="detail" value="Submit" onClick="display()">
+<input type="reset" name="detail" value="Clear">
+</form>
+</body>
+</html>

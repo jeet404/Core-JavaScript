@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JAVASCRIPT EVENT</title>
+<script type="text/javascript">
+function sum()
+	{
+		var a=document.getElementById("val1").value;
+		var b=document.getElementById("val2").value;
+		var sum=0;
+		sum=parseInt(a)+parseInt(b);
+		
+		document.getElementById("result").value=sum;
+
+	}
+	
+function sub()
+	{
+		var a=document.getElementById("val1").value;
+		var b=document.getElementById("val2").value;
+		var sub=0;
+		sub=parseInt(a)-parseInt(b);
+		
+		document.getElementById("result").value=sub;
+		
+	}
+
+function multi()
+	{
+		var a=document.getElementById("val1").value;
+		var b=document.getElementById("val2").value;
+		var sub=0;
+		multi=parseInt(a)*parseInt(b);
+		
+		document.getElementById("result").value=multi;
+		
+	}
+
+function divi()
+	{
+		var a=document.getElementById("val1").value;
+		var b=document.getElementById("val2").value;
+		var divi=0;
+		divi=parseInt(a)/parseInt(b);
+		
+		document.getElementById("result").value=divi;
+		
+	}
+</script>
+</head>
+<body bgcolor="#FC4C4F">
+<h1 align="center">Onclick Event Demo</h1>
+<p>Click on the button when form display</p><br>
+<hr />
+
+Enter Value A :<input type="text" id="val1" /><br>
+Enter Value B :<input type="text" id="val2" /><br>
+Result :<input type="text" id="result" /><br>
+	
+<button id="b1" onClick="sum()">+</button>
+<button id="b2" onClick="sub()">-</button>
+<button id="b3" onClick="multi()">X</button>
+<button id="b4" onClick="divi()">/</button>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script>
+            function Calculate(){
+                var a=parseInt(document.getElementById("txta").value);
+                var b=parseInt(document.getElementById("txtb").value);
+                var c=a+b;
+                var d=a-b;
+                var e=a*b;
+                var f=a/b;
+                var g=a<=b;
+                var h=a>=b;
+                document.getElementById("txtc").value=""+c;
+                document.getElementById("txtd").value=""+d;
+                document.getElementById("txte").value=""+e;
+                document.getElementById("txtf").value=""+f;
+                document.getElementById("txtg").value=""+g;
+                document.getElementById("txth").value=""+h;
+                
+            }
+        </script>
+    </head>
+    <body>
+        <h2 align="center" >The Aerithmatic Program</h2>
+        <hr />
+        <table align="center" bgcolor="#00FF93" border="5px" bordercolor="#FB85A6"  cellpadding="5">
+            <tr align="center">
+                <td bgcolor="#FF72B4" colspan="2">
+                    <label>Enter A:</label>
+                </td>
+                <td align="center" colspan="2">
+                    <input type="text" name="txta" id="txta" />
+                </td>
+            </tr>
+            <tr align="center">
+                <td bgcolor="#FF72B4" align="center" colspan="2">
+                    <label>Enter B:</label>
+                </td>
+                <td align="center" colspan="2">
+                    <input type="text" name="txtb" id="txtb" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" align="center">
+                    <input type="button" value="Calculate" onclick="Calculate()" />
+                </td>
+            </tr>
+             <tr>
+                <td bgcolor="#EC0F4D">
+                    <label>Addition :-</label>
+                </td>
+                <td>
+                    <input type="text" name="txtc" id="txtc" readonly />
+                </td>
+                <td bgcolor="#B72AFF">
+                    <label>Substaction :-</label>
+                </td>
+                <td>
+                    <input type="text" name="txtd" id="txtd" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#3A9AFF">
+                    <label>Multiplication :-</label>
+                </td>
+                <td>
+                    <input type="text" name="txte" id="txte" readonly />
+                </td>
+                <td bgcolor="#8FFF1D">
+                    <label>Division :-</label>
+                </td>
+                <td>
+                    <input type="text" name="txtf" id="txtf" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#FF721E">
+                    <label>A<=B</label>
+                </td>
+                <td>
+                    <input type="text" name="txtg" id="txtg" readonly />
+                </td>
+                <td bgcolor="#FF721E">
+                    <label>A>=B</label>
+                </td>
+                <td>
+                    <input type="text" name="txth" id="txth" readonly />
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
